@@ -1,0 +1,25 @@
+body{
+padding-top:70px;
+}
+.btn-default{
+background-color:#95A5A6;
+border-color:#95A5A6;
+color:#ffffff;
+}
+
+.home-thumb img:hover {
+    transform: scale(1.1)
+}
+
+.thumbnail img {
+   transition: all 0.3s ease 0s;
+   width:100%;
+}
+
+.thumbnail {
+  overflow:hidden;
+}
+.navbar-text > a {
+color:inherit;
+text-decoration:none;
+}

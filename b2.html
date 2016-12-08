@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>GAMA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/full-slider.css" rel="stylesheet">
+
+<style>
+
+.navbar-default ul > a{
+  margin-top: 10px;
+}
+.navbar-default {
+  background-color: white; 
+  border-bottom: transparent;
+  box-shadow: 0 2px;
+}
+.navbar-default .navbar-brand{
+  color:#00897b ;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  float: left;
+}
+.navbar-default .navbar-nav >li >a:hover{
+  color:white;
+  transition: 0.3s;
+  background-color: #00897b;
+  border-radius: 3px;
+}
+.navbar-default .navbar-nav >li > a {  
+  color:#00897b;
+  font-family: verdana;
+  font-size: 1rem;
+  border:1px;
+  border-color:#00897b;
+}
+
+
+.header-container{
+  width: 100%;
+  height: 700px;
+  border-left:none 
+  border-right:none;
+  position: relative;
+  padding-top: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 70px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+    color: #ffab40;
+    margin-right: 20px;
+    transition: color .3s ease;
+    text-transform: uppercase;
+}
+.card .card-content {
+    padding: 20px;
+    border-radius: 0 0 2px 2px;}
+    .card .card-reveal {
+    padding: 20px;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    overflow-y: auto;
+    left: 0;
+    top: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none;
+}
+a {
+    color: #039be5;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.material-icons {
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: 'liga';
+    -moz-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+}
+
+.right {
+    float: right !important;
+}
+i {
+    line-height: inherit;
+}
+i.right {
+    float: right;
+    margin-left: 15px;
+}
+
+  
+.chip {
+    display: inline-block;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.6);
+    line-height: 32px;
+    padding: 0 12px;
+    border-radius: 16px;
+    background-color: #e4e4e4;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 40px -25px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+.chip:hover {
+    cursor:pointer;
+}
+#team .w3-card-2:hover {
+box-shadow: 2px 2px 5px 5px;
+}
+#ed{
+
+  font-family:  "Comic Sans MS", cursive, sans-serif;
+  display: inline-block;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<!--  Navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" style="background-color: lightgrey;" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="font-size: 30px;font-family:'Segoe UI',Arial,sans-serif;">GAMA</a><h4 id="ed">Educare</h4>
+    </div>
+    
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#Home" data-toggle="modal">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Results</a>
+            <ul class="dropdown-menu">
+            <li><a href="#">IX</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">XI</a></li>
+            <li><a href="#">XII</a></li>
+            </ul>
+        </li>        
+        <li><a href="#Signup" data-toggle="modal">Sign Up</a></li>
+        <li><a href="#Login" data-toggle="modal">Login</a></li>
+        <a class="waves-effect waves-light btn" href="#modal1" data-toggle="modal">Modal</a>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Carousel-->          
+<header id="mycarousel" class="carousel slide" style="margin-top: 52px;">
+        <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+         
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+                <div class="item active">
+                  <div class="fill">
+                      <img src="images/b1-1.png" alt="..." style="width:100%;height:800px;"></div>
+                      <div class="carousel-caption">
+                        <h3>Caption Text</h3>
+                      </div>                    
+                </div>
+                <div class="item">
+                  <div class="fill">
+                      <img src="images/b1-2.jpg" alt="..." style="width:100%;height:800px;"></div>
+                      <div class="carousel-caption">
+                        <h3>Caption Text</h3>
+                      </div>                    
+                </div>
+                <div class="item">
+                  <div class="fill">
+                      <img src="images/b1-3.jpg" alt="..." style="width:100%;height:800px;"></div>
+                      <div class="carousel-caption">
+                        <h3>Caption Text</h3>
+                      </div>
+                    
+                </div>
+          </div>
+         
+          <!-- Controls -->
+          <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+</header>
+<!--Carousel End -->
+  
+<!-- Cards -->
+<div class="row" style="margin-top: 5px">
+  <div class="col-sm-3">
+    <div class="w3-card-2" style="position: center;">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/IX.jpg" style="width: 100%;height: 275px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right ">&#xE5D4;</i></span>
+          <p><a href="#">This is a link</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="w3-card-2">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/back6.jpg" style="width: 100%;height: 275px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">&#xE5D4;</i></span>
+          <p><a href="#">This is a link</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="w3-card-2">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/XI.jpg" style="width: 100%;height: 275px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">&#xE5D4;</i></span>
+          <p><a href="#">This is a link</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="w3-card-2" style="position: center;">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/back4.jpg" style="width: 100%;height: 275px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">&#xE5D4;</i></span>
+          <p><a href="#">This is a link</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+    </div>
+  </div>
+</div>        
+<!-- Cards End-->
+
+
+<!-- Team Section -->
+<div class="w3-container w3-padding-128" id="team">
+      <h3 class="w3-center" style="font-family: 'Raleway', sans-serif;background-color:#4db6ac;color:white;padding: 15px;border-radius: 2px;">THE TEAM</h3>
+      <p class="w3-center w3-large" style="font-family: 'Raleway', sans-serif;">The ones who runs this company</p>
+      <div class="w3-row-padding" style="margin-top:64px">
+       
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card-2">
+            <img src="images/Geet.jpg" alt="Geet Mehra" style="width:100%">
+            <div class="w3-container">
+              <h3>Geet Mehra</h3>
+              <p class="w3-opacity">CEO & Founder</p>          
+                <div class="chip" id="1">
+                  <img src="images/Geet.jpg" alt="Person" width="96" height="96">Contact Me
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card-2">
+            <img src="images/Kartik.jpg" alt="Kartik Yadav" style="width:100%">
+            <div class="w3-container">
+              <h3>Kartik Yadav</h3>
+              <p class="w3-opacity">Financial Head</p>          
+              <div class="chip" id="2">
+                  <img src="images/Kartik.jpg" alt="Person" width="96" height="96">Contact Me
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card-2">
+            <img src="images/Gaurav.jpg" alt="Gaurav Kumar Rana" style="width:100%">
+            <div class="w3-container">
+              <h3>Gaurav Kumar Rana</h3>
+              <p class="w3-opacity">Web Designer</p>          
+              <div class="chip" id="3">
+                  <img src="images/Gaurav.jpg" alt="Person" width="96" height="96">Contact Me
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card-2">
+            <img src="images/Vishal.jpg" alt="Gaurav Kumar Rana" style="width:100%">
+            <div class="w3-container">
+              <h3>Vishal Ghosh</h3>
+              <p class="w3-opacity">Web Designer</p>          
+              <div class="chip" id="4">
+                  <img src="images/Vishal.jpg" alt="Person" width="96" height="96">Contact Me
+                </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+<!-- Skills Section -->
+<div class="w3-container w3-light-grey w3-padding-64">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Our Skills.</h3>
+      <p>mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm<br>
+      nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn<br>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+      sssssssssssssssssssssssssssssssssssssssssssssss<br></p>
+    </div>
+    <div class="w3-col m6">
+    <p class="w3-wide"><i class="fa fa-book  w3-margin-right"></i>Subject Proficiency</p>
+      <div class="w3-progress-container w3-grey">
+        <div class="w3-progressbar w3-dark-grey" style="width:95%"></div>
+      </div>      
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
+      <div class="w3-progress-container w3-grey">
+        <div class="w3-progressbar w3-dark-grey" style="width:85%"></div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-users w3-margin-right"></i>Marketting</p>
+      <div class="w3-progress-container w3-grey">
+        <div class="w3-progressbar w3-dark-grey" style="width:88%"></div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
+      <div class="w3-progress-container w3-grey">
+        <div class="w3-progressbar w3-dark-grey" style="width:75%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="w3-padding-large" id="main" style="background-color: black;">
+
+    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+        <h2 class="w3-text-light-grey">Contact Us</h2>
+        <hr style="width:200px" class="w3-opacity">
+
+        <div class="w3-section">
+          <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> IIT BHU , Varanasi , U.P.</p>
+          <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 8808662167 , 7270941043</p>
+          <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: gaurav.krana.phe15@itbhu.ac.in</p>
+        </div><br>
+        
+        <p>Lets get in touch. Send Us a message:</p>
+        <p><input class="w3-input w3-border w3-padding-16" type="text" placeholder="Name"></p>
+        <p><input class="w3-input w3-border w3-padding-16" type="text" placeholder="Email"></p>
+        <p><input class="w3-input w3-border w3-padding-16" type="text" placeholder="Subject"></p>
+        <p><input class="w3-input w3-border w3-padding-16" type="text" placeholder="Comment"></p>
+        <p><button class="w3-btn w3-light-grey w3-padding-large w3-hover-grey">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button></p>
+      <!-- End Contact Section -->
+    </div>
+
+        <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+            <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
+            <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
+            <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
+            <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
+            <p class="w3-medium">Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+          <!-- End footer -->
+          </footer>
+</div>
+
+
+<!-- modals -->
+
+
+<div class="modal fade" id="Signup" role="dialog" action="connection.php" method="post" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form class="form-horizontal" role="form">
+        <div class="modal-header">
+                  <h4>SignUp</h4>
+        </div>
+        <div class="modal-body">
+              <div class="form-group">
+                <label for="contact-name" class="col-sm-2" control-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name ="fullname" id="name" placeholder="First & Last Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-number" class="col-sm-2" control-label">Number</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="number" id="number" placeholder="Phone Number">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="col-sm-2" control-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="email" id="email" placeholder="example@domain.com">
+                </div>
+              </div>    
+              <div class="form-group">
+                <label for="password" class="col-sm-2" control-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="password"  id="password" placeholder="Password">
+                </div>
+              </div>       
+        </div>        
+        <div class="modal-footer">
+          <a class="btn btn-default" data-dismiss="modal">Close</a>
+          <button type="submit" class="btn btn-primary" name="submit" style="background-color: ">Send</button>  
+        </div>
+      </form> 
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="Login" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">     
+      <div class="modal-header">
+        <h4 style="text-align: center;color: blue;font-family: verdana;">Log In Details</h4>
+      </div>
+      
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email" name="">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" name="">
+          </div>
+        </form>
+      </div>
+      
+      <div class="modal-footer" style="text-align: center;">
+        <button class="btn btn-primary">Log In</button>
+      </div>
+    </div>    
+  </div>
+</div>
+
+
+<div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>          
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="jquery-3.1.1.min.js"></script>
+
+
+
+
+</body>
+</html>
